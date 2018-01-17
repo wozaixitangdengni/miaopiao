@@ -1,0 +1,278 @@
+.bottom_interval {
+  border-bottom: 0.45rem solid #F6F6F6;
+}
+.top_interval {
+  border-top: 0.45rem solid #F6F6F6;
+}
+body {
+  max-width: 750px;
+  margin: 0 auto;
+}
+.comm-head {
+  height: 2.25rem;
+  border-bottom: 0.45rem solid #F6F6F6;
+  padding: 0.25rem 0.4rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-between;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+}
+.comm-head .logo {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 100%;
+}
+.comm-head .logo img {
+  height: 100%;
+}
+.comm-head .menu {
+  width: 2.175rem;
+  height: 1.6rem;
+  border: 1px solid #D7D7D7;
+  -webkit-border-radius: 0.15rem;
+  border-radius: 0.15rem;
+  background-image: url(../images/caidan-n.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 60%;
+}
+.comm-head .menu.active {
+  background-image: url(../images/caidan-a.png);
+}
+.xg {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: flex-start;
+  -webkit-align-items: flex-start;
+  -moz-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: space-between;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  text-align: center;
+  padding: 1rem 0.4rem;
+}
+.xg .xg-item {
+  width: 5.5rem;
+  height: 100%;
+}
+.xg .xg-item:not(:last-child) {
+  margin-right: .5rem;
+}
+.xg .xg-item a {
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+  height: 3.75rem;
+  width: 3.75rem;
+  box-shadow: 0.02rem 0.02rem 0.03rem 0.01rem #a29d9d;
+  position: relative;
+}
+.xg .xg-item a i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.xg .xg-item a i.miaojuyuan {
+  background-image: url(../images/tese-miaojuyuan.png);
+}
+.xg .xg-item a i.miaojingqu {
+  background-image: url(../images/tese-miaojinqu.png);
+}
+.xg .xg-item a i.miaoyingyuan {
+  background-image: url(../images/tese-miaohuodong.png);
+}
+.xg .xg-item .title {
+  font-size: 0.65rem;
+  padding: .5rem 0;
+  font-weight: 600;
+}
+.xg .xg-item .xg-item-dis {
+  color: #949494;
+  line-height: .8rem;
+  font-size: 0.55rem;
+}
+.i-we-chat {
+  padding: 0 0.4rem 0.4rem;
+}
+.i-we-chat .title {
+  font-size: .75rem;
+  text-align: center;
+  padding: .6rem 0;
+}
+.i-we-chat .i-we-chat-img {
+  padding: 0rem 1rem 0;
+  height: 12.5rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.i-we-chat .i-we-chat-img img {
+  width: 100%;
+}
+.i-we-chat .i-we-chat-dis div {
+  padding-bottom: .5rem;
+  color: #737373;
+  font-size: .5rem;
+}
+.i-we-chat .i-we-chat-dis div p {
+  margin-left: .5rem;
+  line-height: .9rem;
+}
+.i-we-chat .i-we-chat-dis span {
+  color: #EC6923;
+  float: left;
+  width: .5rem;
+  height: .6rem;
+  margin-right: .1rem;
+  margin-top: .1rem;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAUCAYAAABbLMdoAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjRGOTQ2MjA2RkI2QzExRTdBQTc1QkQ3NDI2NDYzREJFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRGOTQ2MjA3RkI2QzExRTdBQTc1QkQ3NDI2NDYzREJFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NEY5NDYyMDRGQjZDMTFFN0FBNzVCRDc0MjY0NjNEQkUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NEY5NDYyMDVGQjZDMTFFN0FBNzVCRDc0MjY0NjNEQkUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7MN8QeAAABQklEQVR42mJ8kyYnysDAcAiIFwjPfNjJgAcwAfFuINYA4o636fLphBTfQOJPA2qIwKc4Doh3IvEXATV4YlPM+P//fwagJBeQvQeILaHi34HYDeiHIxiKQQCogR9IHQZiXajcJyC2B2q4gKEYqkEMSB0DYmWo0BuQbUANd2BuhAOg4Csg5QzET6FCIkC8D2iIDIbJSDZoAamDUMUgcBOIbbEqhmowBVJ7gZgXKnSaCU8cCAExBxL/KS5nmAOp/UDMCRUC2eCFoRioUAMahDD3ngFiJ6DnP6MHHcjXx4FYBip0G4itgQpfowQdUKEwNNphCp9CY/E1ctqARfcWINaCin8EYk+gwgcoCQmokA1IrwFiC6R04Q1UeBlbqpsFMgXK/wvEYUCFR3ElUX0kfgpQ4RZ86dkNiK8DcSlQ4QJ8OQUgwAA7FnNR8w7plAAAAABJRU5ErkJggg==);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.i-dong-tai {
+  padding: 0 .4rem;
+}
+.i-dong-tai .i-dong-tai-title {
+  padding: .6rem 0;
+  text-align: center;
+  font-size: 1rem;
+}
+.i-dong-tai .i-dong-tai-main {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.i-dong-tai .i-dong-tai-main .i-dong-tai-main-item {
+  height: 6.75rem;
+}
+.i-dong-tai .i-dong-tai-main .i-dong-tai-main-item .left {
+  text-align: center;
+  width: 4rem;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 1.2rem;
+  float: left;
+}
+.i-dong-tai .i-dong-tai-main .i-dong-tai-main-item .left.orange {
+  background-color: #EE7331;
+}
+.i-dong-tai .i-dong-tai-main .i-dong-tai-main-item .left.orange .title {
+  color: #fff;
+}
+.i-dong-tai .i-dong-tai-main .i-dong-tai-main-item .left.orange .english {
+  color: #fff;
+}
+.i-dong-tai .i-dong-tai-main .i-dong-tai-main-item .left .title {
+  color: #EE7331;
+  font-size: .6rem;
+  padding: .1rem 0;
+}
+.i-dong-tai .i-dong-tai-main .i-dong-tai-main-item .left .english {
+  color: #EE7331;
+  font-size: 0.35rem;
+  font-style: normal;
+}
+.i-dong-tai .i-dong-tai-main .i-dong-tai-main-item .left .icon {
+  display: inline-block;
+  width: 2.05rem;
+  height: 2.05rem;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.i-dong-tai .i-dong-tai-main .i-dong-tai-main-item .left .songsi {
+  background-image: url(../images/gongsi.png);
+}
+.i-dong-tai .i-dong-tai-main .i-dong-tai-main-item .left .chanping {
+  background-image: url(../images/chanpin.png);
+}
+.i-dong-tai .i-dong-tai-main .i-dong-tai-main-item .left .qianyue {
+  background-image: url(../images/qianyue.png);
+}
+.i-dong-tai .i-dong-tai-main .i-dong-tai-main-item .right {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-left: 4rem;
+  height: 100%;
+  overflow: hidden;
+}
+.i-dong-tai .i-dong-tai-main .i-dong-tai-main-item .right .item {
+  padding-left: .5rem;
+  padding-top: .05rem;
+  padding-bottom: .05rem;
+}
+.i-dong-tai .i-dong-tai-main .i-dong-tai-main-item .right .item.active p {
+  color: #EE7331;
+}
+.i-dong-tai .i-dong-tai-main .i-dong-tai-main-item .right .item.active div {
+  display: -webkit-box;
+}
+.i-dong-tai .i-dong-tai-main .i-dong-tai-main-item .right .item p {
+  font-size: .5rem;
+  color: #484444;
+  white-space: normal;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  line-height: .7rem;
+}
+.i-dong-tai .i-dong-tai-main .i-dong-tai-main-item .right .item div {
+  padding-left: .5rem;
+  white-space: normal;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  font-size: 0.45rem;
+  color: #9C9C9C;
+  line-height: .8rem;
+  height: 2.3rem;
+  display: none;
+}
