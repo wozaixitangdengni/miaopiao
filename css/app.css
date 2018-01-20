@@ -8,6 +8,7 @@ body {
   max-width: 750px;
   margin: 0 auto;
 }
+/*头部样式加弹出菜单样式*/
 .comm-head {
   height: 2.25rem;
   border-bottom: 0.45rem solid #F6F6F6;
@@ -52,6 +53,63 @@ body {
 }
 .comm-head .menu.active {
   background-image: url(../images/caidan-a.png);
+  background-size: 50%;
+}
+.comm-menu {
+  position: absolute;
+  z-index: 998;
+  top: 0;
+  right: 0;
+  left: 0;
+  -webkit-transform: translate(0, -100%);
+  -moz-transform: translate(0, -100%);
+  -ms-transform: translate(0, -100%);
+  transform: translate(0, -100%);
+  transition: all .3s ease;
+}
+.comm-menu.active {
+  top: 2.5rem;
+  transform: translate(0, 0);
+}
+.comm-menu .comm-menu-mask {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 999;
+}
+.comm-menu .comm-menu-main {
+  position: relative;
+  z-index: 1000;
+}
+.comm-menu .comm-menu-main p {
+  padding-top: 0.7rem;
+  text-align: center;
+}
+.comm-menu .comm-menu-main p a {
+  color: #fff;
+  font-size: .65rem;
+}
+.comm-menu .comm-menu-main p:last-child {
+  padding: 0.7rem 0;
+}
+.comm-footer {
+  background-color: #242424;
+  text-align: center;
+  padding: .5rem 0 .75rem;
+  font-size: .5rem;
+}
+.comm-footer p {
+  color: #fff;
+  line-height: .7rem;
+}
+.comm-footer p:last-child {
+  padding-top: .3rem;
+}
+.comm-footer p a {
+  color: #fff;
 }
 .xg {
   display: -webkit-box;
@@ -86,7 +144,7 @@ body {
   display: block;
   height: 3.75rem;
   width: 3.75rem;
-  box-shadow: 0.02rem 0.02rem 0.03rem 0.01rem #a29d9d;
+  box-shadow: 0.02rem 0.02rem 0.03rem 0.01rem #dad3d3;
   position: relative;
 }
 .xg .xg-item a i {
@@ -167,7 +225,7 @@ body {
 .i-dong-tai .i-dong-tai-title {
   padding: .6rem 0;
   text-align: center;
-  font-size: 1rem;
+  font-size: .8rem;
 }
 .i-dong-tai .i-dong-tai-main {
   display: -webkit-box;
@@ -275,4 +333,379 @@ body {
   line-height: .8rem;
   height: 2.3rem;
   display: none;
+}
+/*订购流程*/
+.i-liu-cheng {
+  padding: 0 0.4rem;
+}
+.i-liu-cheng .i-liu-cheng-title {
+  padding: .6rem 0;
+  text-align: center;
+  font-size: .8rem;
+}
+.i-liu-cheng .i-liu-cheng-main .i-liu-cheng-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: flex-start;
+  -webkit-align-items: flex-start;
+  -moz-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  padding-bottom: .5rem;
+}
+.i-liu-cheng .i-liu-cheng-main .i-liu-cheng-row .i-liu-cheng-cell {
+  width: 50%;
+}
+.i-liu-cheng .i-liu-cheng-main .i-liu-cheng-row .i-liu-cheng-cell .i-liu-cheng-img {
+  height: 6rem;
+  text-align: center;
+}
+.i-liu-cheng .i-liu-cheng-main .i-liu-cheng-row .i-liu-cheng-cell .i-liu-cheng-img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.i-liu-cheng .i-liu-cheng-main .i-liu-cheng-row .i-liu-cheng-cell p {
+  font-size: .6rem;
+  text-align: center;
+  color: #333333;
+  padding: .3rem 0;
+}
+.i-liu-cheng .i-liu-cheng-main .i-liu-cheng-row .i-liu-cheng-cell span {
+  font-size: .5rem;
+  color: #666666;
+  display: block;
+  padding: 0 .5rem 0 1rem;
+  line-height: 0.8rem;
+}
+/*配套硬件样式 */
+.ptyj {
+  padding: .4rem;
+}
+.ptyj .ptyj-cell {
+  border: 1px solid #E8E8E8;
+  padding: .5rem;
+  margin-bottom: .5rem;
+}
+.ptyj .ptyj-cell .ptyj-cell-title {
+  font-size: .75rem;
+  color: #666666;
+  padding: .5rem 0;
+  padding-top: 0;
+  font-weight: 600;
+}
+.ptyj .ptyj-cell .ptyj-cell-img img {
+  display: block;
+  margin: 0 auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+.ptyj .ptyj-cell .ptyj-cell-dis-price {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-between;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  padding: .5rem 0;
+}
+.ptyj .ptyj-cell .ptyj-cell-dis-price span:first-child {
+  font-size: .7rem;
+}
+.ptyj .ptyj-cell .ptyj-cell-dis-price span:last-child {
+  font-size: .55rem;
+  color: #EE7C46;
+  margin-right: 1rem;
+}
+.ptyj .ptyj-cell .ptyj-cell-dis-row {
+  color: #999999;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: flex-start;
+  -webkit-align-items: flex-start;
+  -moz-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: flex-start;
+  -webkit-justify-content: flex-start;
+  -moz-box-pack: flex-start;
+  -ms-flex-pack: flex-start;
+  justify-content: flex-start;
+}
+.ptyj .ptyj-cell .ptyj-cell-dis-row .icon {
+  margin-right: .5rem;
+  font-size: .5rem;
+}
+.ptyj .ptyj-cell .ptyj-cell-dis-row > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: flex-start;
+  -webkit-align-items: flex-start;
+  -moz-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: flex-start;
+  -webkit-justify-content: flex-start;
+  -moz-box-pack: flex-start;
+  -ms-flex-pack: flex-start;
+  justify-content: flex-start;
+  font-size: .55rem;
+}
+.ptyj .ptyj-cell .ptyj-cell-dis-row > div p {
+  padding-bottom: .4rem;
+  line-height: .8rem;
+}
+/*精彩推荐样式*/
+.jctj .jctj-head {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: flex-start;
+  -webkit-justify-content: flex-start;
+  -moz-box-pack: flex-start;
+  -ms-flex-pack: flex-start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fff;
+}
+.jctj .jctj-head a {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-size: .65rem;
+  color: #333333;
+  text-align: center;
+  padding: .5rem 0;
+}
+.jctj .jctj-head a.active {
+  background-color: #EE7331;
+  color: #fff;
+}
+.jctj .jctj-main {
+  padding: .45rem;
+  overflow: hidden;
+}
+.jctj .jctj-main .jctj-cell {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 48%;
+  float: left;
+  margin-bottom: .5rem;
+  border: 1px solid #E9E9E9;
+  display: inline-block;
+}
+.jctj .jctj-main .jctj-cell .jctj-cell-img {
+  padding-bottom: .3rem;
+}
+.jctj .jctj-main .jctj-cell .jctj-cell-img img {
+  max-height: 100%;
+  max-width: 100%;
+}
+.jctj .jctj-main .jctj-cell .jctj-cell-p {
+  font-size: .55rem;
+  color: #999999;
+  padding: .4rem .2rem;
+  padding-top: 0;
+}
+.jctj .jctj-main .jctj-cell .jctj-cell-p span {
+  line-height: .8rem;
+}
+.jctj .jctj-main .jctj-cell .jctj-cell-p .left {
+  float: left;
+}
+.jctj .jctj-main .jctj-cell .jctj-cell-p .right {
+  margin-left: 1.8rem;
+  line-height: .8rem;
+}
+.jctj .jctj-main .jctj-cell .jctj-cell-p .jctj-cell-p-title {
+  font-size: .6rem;
+  font-weight: 600;
+  color: #666666;
+}
+.jctj .jctj-main .jctj-cell:nth-last-of-type(even) {
+  margin-right: .25rem;
+}
+.jctj .jctj-main .jctj-cell:nth-last-of-type(odd) {
+  margin-left: .25rem;
+}
+/*喵景区样式*/
+.mjq .mjq-header img {
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+}
+.mjq .mjq-item {
+  padding: .45rem;
+}
+.mjq .mjq-item .mjq-item-title {
+  color: #333;
+  font-size: .75rem;
+  padding: .5rem 0;
+  text-align: center;
+}
+.mjq .mjq-item .mjq-item-info {
+  font-size: .6rem;
+  color: #666666;
+  line-height: 1rem;
+  padding: 0 0 .5rem 0;
+}
+.mjq .mjq-item .mjq-item-img {
+  padding: .4rem 0;
+}
+.mjq .mjq-item .mjq-item-img img {
+  display: block;
+  margin: 0 auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+.mjq .mjq-item .mjq-check {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: flex-start;
+  -webkit-align-items: flex-start;
+  -moz-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: flex-start;
+  -webkit-justify-content: flex-start;
+  -moz-box-pack: flex-start;
+  -ms-flex-pack: flex-start;
+  justify-content: flex-start;
+  padding-bottom: .75rem;
+  padding-top: .3rem;
+}
+.mjq .mjq-item .mjq-check div {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.mjq .mjq-item .mjq-check div:first-child {
+  padding-right: .6rem;
+}
+.mjq .mjq-item .mjq-check div p {
+  font-size: .6rem;
+  color: #333333;
+}
+.mjq .mjq-item .mjq-check div span {
+  color: #666666;
+  font-size: .6rem;
+}
+/*喵剧院样式*/
+.mjy .mjy-header img {
+  display: block;
+  margin: 0 auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+.mjy .mjy-item {
+  padding: .4rem;
+}
+.mjy .mjy-item .mjy-item-img img {
+  display: block;
+  margin: 0 auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+.mjy .mjy-item .mjy-item-title {
+  font-size: .75rem;
+  text-align: center;
+  color: #333333;
+  padding: .5rem 0;
+}
+.mjy .mjy-item .mjy-item-dis {
+  font-size: .6rem;
+  color: #666666;
+  line-height: 1rem;
+}
+.mjy .mjy-gong-neng {
+  background-color: #EC661E;
+}
+.mjy .mjy-gong-neng .mjy-gong-neng-title {
+  font-size: .75rem;
+  color: #fff;
+  text-align: center;
+  padding: .5rem 0;
+}
+.mjy .mjy-gong-neng .mjy-gong-neng-main {
+  padding: 0 .6rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.mjy .mjy-gong-neng .mjy-gong-neng-main .mjy-gong-neng-cell {
+  float: left;
+  height: 4.6rem;
+  width: 4.6rem;
+  position: relative;
+  margin-bottom: .5rem;
+}
+.mjy .mjy-gong-neng .mjy-gong-neng-main .mjy-gong-neng-cell:nth-of-type(even) {
+  background-color: #E35A11;
+}
+.mjy .mjy-gong-neng .mjy-gong-neng-main .mjy-gong-neng-cell:nth-of-type(odd) {
+  background-color: #FA6E22;
+}
+.mjy .mjy-gong-neng .mjy-gong-neng-main .mjy-gong-neng-cell div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: .6rem;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+}
+.mjy .mjy-gong-neng .mjy-gong-neng-main .mjy-gong-neng-cell div i {
+  font-size: 1.5rem;
+}
+.mjy .mjy-gong-neng .mjy-gong-neng-main .mjy-gong-neng-cell div p {
+  padding-top: .2rem;
 }

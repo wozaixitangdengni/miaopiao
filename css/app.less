@@ -8,6 +8,7 @@
   .bottom_interval();
 }
 
+
 .top_interval(){
   border-top: 0.45rem solid #F6F6F6;
 }
@@ -20,6 +21,8 @@ body{
   margin: 0 auto;
 }
 
+
+/*头部样式加弹出菜单样式*/
 .comm-head{
   height: 2.25rem;
   .bottom_interval();
@@ -45,9 +48,68 @@ body{
     background-size: 60%;
     &.active{
       background-image: url(../images/caidan-a.png);
+      background-size: 50%;
     }
   }
 }
+.comm-menu{
+  position: absolute;
+  z-index: 998;
+  //padding-top: 2.25rem;
+  top:0;
+  right: 0;
+  left: 0;
+  -webkit-transform: translate(0, -100%);
+  -moz-transform: translate(0, -100%);
+  -ms-transform: translate(0, -100%);
+  transform: translate(0, -100%);
+  transition: all .3s ease;
+  &.active{
+    top:2.5rem;
+    transform: translate(0, 0);
+  }
+  .comm-menu-mask{
+    background-color: rgba(0,0,0,.8);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top:0;
+    z-index: 999;
+  }
+  .comm-menu-main{
+    position: relative;
+    z-index: 1000;
+    p{
+      padding-top: 0.7rem;
+      text-align: center;
+      a{
+        color: #fff;
+        font-size: .65rem;
+      }
+      &:last-child{
+        padding: 0.7rem 0;
+      }
+    }
+  }
+}
+.comm-footer{
+  background-color: #242424;
+  text-align: center;
+  padding: .5rem 0 .75rem;
+  font-size: .5rem;
+  p{
+    color: #fff;
+    line-height: .7rem;
+    &:last-child{
+      padding-top: .3rem;
+    }
+    a{
+      color: #fff;
+    }
+  }
+}
+
 
 .xg{
   .display_flex();
@@ -67,7 +129,7 @@ body{
       display: block;
       height: 3.75rem;
       width: 3.75rem;
-      box-shadow: 0.02rem 0.02rem 0.03rem 0.01rem #a29d9d;
+      box-shadow:0.02rem 0.02rem 0.03rem 0.01rem #dad3d3;
       position: relative;
       i{
         .position_a();
@@ -145,8 +207,7 @@ body{
   .i-dong-tai-title{
     padding: .6rem 0;
     text-align: center;
-    font-size: 1rem;
-    //font-weight: 600;
+    font-size: .8rem;
   }
   .i-dong-tai-main{
     .display_flex();
@@ -235,3 +296,311 @@ body{
     }
   }
 }
+
+/*订购流程*/
+.i-liu-cheng{
+  padding: 0 0.4rem;
+  .i-liu-cheng-title{
+    padding: .6rem 0;
+    text-align: center;
+    font-size: .8rem;
+  }
+  .i-liu-cheng-main{
+    .i-liu-cheng-row{
+      .display_flex();
+      .justify_content(center);
+      .align_items(flex-start);
+      padding-bottom: .5rem;
+      .i-liu-cheng-cell{
+        width: 50%;
+        .i-liu-cheng-img{
+          height: 6rem;
+          text-align: center;
+          img{
+            max-width: 100%;
+            max-height: 100%;
+          }
+        }
+
+        p{
+          font-size: .6rem;
+          text-align: center;
+          color: #333333;
+          padding: .3rem 0;
+        }
+        span{
+          font-size: .5rem;
+          color:#666666;
+          display: block;
+          padding: 0 .5rem 0 1rem;
+          line-height: 0.8rem;
+        }
+      }
+    }
+  }
+}
+
+
+/*配套硬件样式 */
+.ptyj{
+  padding: .4rem;
+  .ptyj-cell{
+    border:1px solid #E8E8E8;
+    padding: .5rem;
+    margin-bottom: .5rem;
+    .ptyj-cell-title{
+      font-size: .75rem;
+      color:#666666;
+      padding: .5rem 0;
+      padding-top: 0;
+      font-weight: 600;
+    }
+    .ptyj-cell-img{
+      img{
+        display: block;
+        margin: 0 auto;
+        max-height: 100%;
+        max-width: 100%;
+      }
+    }
+    .ptyj-cell-dis-price{
+      .display_flex();
+      .align_items(center);
+      .jcs();
+      padding: .5rem 0;
+      span{
+        &:first-child{
+          font-size: .7rem;
+        }
+        &:last-child{
+          font-size: .55rem;
+          color:#EE7C46;
+          margin-right: 1rem;
+        }
+      }
+    }
+    .ptyj-cell-dis-row{
+      color:#999999;
+      .display_flex();
+      .align_items(flex-start);
+      .justify_content(flex-start);
+      //padding-bottom: .3rem;
+      .icon{
+        margin-right: .5rem;
+        font-size: .5rem;
+      }
+      &>div{
+        .display_flex();
+        .align_items(flex-start);
+        .justify_content(flex-start);
+        font-size: .55rem;
+        p{
+          padding-bottom: .4rem;
+          line-height: .8rem;
+        }
+      }
+    }
+  }
+}
+
+/*精彩推荐样式*/
+.jctj{
+  .jctj-head{
+    .display_flex();
+    .justify_content(flex-start);
+    .align_items(center);
+    background-color: #fff;
+    a{
+      .flex(1);
+      font-size: .65rem;
+      color:#333333;
+      text-align: center;
+      padding: .5rem 0;
+      &.active{
+        background-color: #EE7331;
+        color:#fff;
+      }
+    }
+  }
+  .jctj-main{
+    padding: .45rem;
+    overflow: hidden;
+    .jctj-cell{
+      .box_sizing();
+      width: 48%;
+      float: left;
+      margin-bottom: .5rem;
+      border: 1px solid #E9E9E9;
+      display: inline-block;
+      .jctj-cell-img{
+        padding-bottom: .3rem;
+        img{
+          max-height: 100%;
+          max-width: 100%;
+        }
+      }
+      .jctj-cell-p{
+        font-size: .55rem;
+        color:#999999;
+        padding: .4rem .2rem;
+        padding-top: 0;
+        span{
+          line-height: .8rem;
+        }
+        .left{
+          float: left;
+        }
+        .right{
+          margin-left: 1.8rem;
+          line-height: .8rem;
+        }
+        .jctj-cell-p-title{
+          font-size: .6rem;
+          font-weight: 600;
+          color:#666666;
+        }
+      }
+      &:nth-last-of-type(even){
+        margin-right: .25rem;
+      }
+      &:nth-last-of-type(odd){
+        margin-left: .25rem;
+      }
+    }
+  }
+}
+
+/*喵景区样式*/
+.mjq{
+  .mjq-header{
+    img{
+      display: block;
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+  .mjq-item{
+    padding: .45rem;
+    .mjq-item-title{
+      color: #333;
+      font-size: .75rem;
+      padding: .5rem 0;
+      text-align: center;
+    }
+    .mjq-item-info{
+      font-size: .6rem;
+      color:#666666;
+      line-height: 1rem;
+      padding: 0 0 .5rem 0;
+    }
+    .mjq-item-img{
+      padding: .4rem 0;
+      img{
+        display: block;
+        margin: 0 auto;
+        max-height: 100%;
+        max-width: 100%;
+      }
+    }
+    .mjq-check{
+      .display_flex();
+      .align_items(flex-start);
+      .justify_content(flex-start);
+      padding-bottom: .75rem;
+      padding-top: .3rem;
+      div{
+        .flex(1);
+        &:first-child{
+          padding-right: .6rem;
+        }
+        p{
+          font-size: .6rem;
+          color:#333333;
+        }
+        span{
+          color:#666666;
+          font-size: .6rem;
+        }
+      }
+    }
+  }
+}
+
+/*喵剧院样式*/
+.mjy{
+  .mjy-header{
+    img{
+      display: block;
+      margin: 0 auto;
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+  .mjy-item{
+    padding: .4rem;
+    .mjy-item-img{
+      img{
+        display: block;
+        margin: 0 auto;
+        max-height: 100%;
+        max-width: 100%;
+      }
+    }
+    .mjy-item-title{
+      font-size: .75rem;
+      text-align: center;
+      color:#333333;
+      padding: .5rem 0;
+    }
+    .mjy-item-dis{
+      font-size: .6rem;
+      color:#666666;
+      line-height: 1rem;
+    }
+  }
+  .mjy-gong-neng{
+    background-color: #EC661E;
+    .mjy-gong-neng-title{
+      font-size: .75rem;
+      color:#fff;
+      text-align: center;
+      padding: .5rem 0;
+    }
+    .mjy-gong-neng-main{
+      padding:0 .6rem;
+      overflow: hidden;
+      .display_flex();
+      .jcs();
+      flex-wrap:wrap;
+      .mjy-gong-neng-cell{
+        float: left;
+        height: 4.6rem;
+        width: 4.6rem;
+        position: relative;
+        margin-bottom: .5rem;
+        &:nth-of-type(even){
+          background-color: #E35A11;
+        }
+        &:nth-of-type(odd){
+          background-color: #FA6E22;
+        }
+        div{
+          .position_a();
+          font-size: .6rem;
+          text-align: center;
+          color:#fff;
+          width: 100%;
+          i{
+            font-size: 1.5rem;
+          }
+          p{
+            padding-top: .2rem;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
