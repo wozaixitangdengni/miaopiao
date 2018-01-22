@@ -17,25 +17,38 @@
     <a href="" class="logo">
         <img src="images/logo.png" alt=""/>
     </a>
-    <div class="menu active"></div>
+    <div class="menu" data-head></div>
 </header>
 <!--弹出菜单-->
-<div class="comm-menu">
+<div class="comm-menu" data-menu>
     <div class="comm-menu-mask"></div>
     <div class="comm-menu-main">
-        <p><a href="javascript:;">首页</a></p>
-        <p><a href="javascript:;">喵剧院</a></p>
-        <p><a href="javascript:;">喵景区</a></p>
-        <p><a href="javascript:;">精彩推荐</a></p>
-        <p><a href="javascript:;">配套硬件</a></p>
+        <p><a href="index.html">首页</a></p>
+        <p><a href="miaojuyuan.html">喵剧院</a></p>
+        <p><a href="miaojingqu.html">喵景区</a></p>
+        <p><a href="jingcaituijian.html">精彩推荐</a></p>
+        <p><a href="peitaoyinjian.html">配套硬件</a></p>
     </div>
 </div>
+<script>
+    var menus = document.querySelector('[data-head]');
+    var comm_menu = document.querySelector("[data-menu]");
+    menus.onclick = function(){
+        if(this.className.indexOf("active") < 0){
+            this.className += " active";
+            comm_menu.className += ' active';
+        }else{
+            this.className = this.className.replace(/active/ig,'');
+            comm_menu.className = comm_menu.className.replace(/active/ig,'');
+        }
+    };
+</script>
 
 <section class="mjy">
    <header class="mjy-header bottom_interval">
        <img src="images/miaojuyuan_banner01.png" alt=""/>
    </header>
-    <div class="mjy-item">
+    <div class="mjy-item bottom_interval">
         <div class="mjy-item-img">
             <img src="images/shoupiaoxitong.png" alt=""/>
         </div>
@@ -45,7 +58,7 @@
             <p>企业可以通过一个管理后台轻松对不同渠道进行票务和数据的管理</p>
         </div>
     </div>
-    <div class="mjy-gong-neng">
+    <div class="mjy-gong-neng bottom_interval">
         <p class="mjy-gong-neng-title">喵票售票系统产品功能</p>
         <div class="mjy-gong-neng-main">
             <div class="mjy-gong-neng-cell">
@@ -138,6 +151,75 @@
                     <p>场馆位置导航</p>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="mjy-item bottom_interval">
+        <p class="mjy-item-title">微信公众号移动售票</p>
+        <div class="mjy-items">
+            <div class="mjy-item-img">
+                <img src="images/yidongshoupiao.png" alt=""/>
+            </div>
+            <div class="mjy-item-dis">
+                <p>顾客可以在手机上通过登录企业官方
+                    微信公众号实现随时随地购票体验，
+                    并且喵票售票系统具备丰富的移动交
+                    互功能，如微信支付、移动端在线选
+                    座、电子票好友分享、我的剧票、二
+                    维码电子票、票价分档等。</p>
+            </div>
+        </div>
+    </div>
+    <div class="mjy-item bottom_interval">
+        <p class="mjy-item-title">线下售票窗口业务</p>
+        <div class="mjy-item-dis">
+            <p>窗口兑票：顾客可持微信线上购买的电子票，在线下售票窗口兑换纸质票进场；</p>
+            <p>窗口售票：顾客可直接在线下窗口购买纸质票入场，如需选座则由售票员代为选座；</p>
+            <p>现场售票支付方式:现金、微信支付、支付宝支付、银联POS刷卡。</p>
+        </div>
+        <div class="mjy-item-img">
+            <img src="images/chuangkouyewu.png" style="width: 60%;" alt=""/>
+        </div>
+    </div>
+    <div class="mjy-item bottom_interval">
+        <p class="mjy-item-title">在线选座“大一统”</p>
+        <div class="mjy-item-img">
+            <img src="images/dayitong.png" style="width: 60%;" alt=""/>
+        </div>
+        <div class="mjy-item-dis">
+            <p>你是否还在为不同售票渠道之间无法实现在线选座信息的同步而苦恼？但如果你拥有属于自己的选座系统，情况就大不一样，我们帮助团队打通各渠道平台系统间的选座壁垒与障碍。</p>
+        </div>
+    </div>
+    <div class="mjy-video bottom_interval">
+        <p class="mjy-video-title">操作视频</p>
+        <div class="mjy-video-item">
+            <p class="mjy-video-item-title">窗口售票演示</p>
+            <div class="mjy-video-item-dis">
+                <p>标配硬件：扫码枪、纸票打印机、银联pos机、电脑。</p>
+                <p>流程介绍：连接硬件—登录售票窗— 选剧选场—在线选座—现 场收银—打印出票。</p>
+                <p>收银方式：微信、支付宝、现金、银联刷卡</p>
+            </div>
+            <div class="mjy-video-item-main">
+                <video src="https://www.miaopiao.me/themes/simplebootx/Index/images/caozuo.mp4" poster="images/shoupiao.png" controls></video>
+            </div>
+        </div>
+        <div class="mjy-video-item">
+            <p class="mjy-video-item-title">电子票验票演示</p>
+            <div class="mjy-video-item-dis">
+                <p>标配硬件：工作人员、智能手机。</p>
+                <p>流程介绍：工作人员登录企业微信公众号，进入验证页面—顾 客展示电子票二维码—工作人员手机扫码验证—验 证成功后核销电子票、顾客入场。</p>
+            </div>
+            <div class="mjy-video-item-main">
+                <video src="https://www.miaopiao.me/themes/simplebootx/Index/images/hexiao.mp4" poster="images/hexiao.png" controls></video>
+            </div>
+        </div>
+    </div>
+    <div class="mjy-hzdw bottom_interval">
+        <p class="mjy-hzdw-title">合作单位</p>
+        <div class="mjy-hzdw-main">
+            <div class="mjy-hzdw-main-item"><img src="images/hezuogongsi.png" alt=""/></div>
+            <div class="mjy-hzdw-main-item"><img src="images/hezuogongsi.png" alt=""/></div>
+            <div class="mjy-hzdw-main-item"><img src="images/hezuogongsi.png" alt=""/></div>
+            <div class="mjy-hzdw-main-item"><img src="images/hezuogongsi.png" alt=""/></div>
         </div>
     </div>
 </section>

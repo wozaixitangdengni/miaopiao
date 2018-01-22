@@ -15,19 +15,32 @@
     <a href="" class="logo">
         <img src="images/logo.png" alt=""/>
     </a>
-    <div class="menu active"></div>
+    <div class="menu" data-head></div>
 </header>
 <!--弹出菜单-->
-<div class="comm-menu">
+<div class="comm-menu" data-menu>
     <div class="comm-menu-mask"></div>
     <div class="comm-menu-main">
-        <p><a href="javascript:;">首页</a></p>
-        <p><a href="javascript:;">喵剧院</a></p>
-        <p><a href="javascript:;">喵景区</a></p>
-        <p><a href="javascript:;">精彩推荐</a></p>
-        <p><a href="javascript:;">配套硬件</a></p>
+        <p><a href="index.html">首页</a></p>
+        <p><a href="miaojuyuan.html">喵剧院</a></p>
+        <p><a href="miaojingqu.html">喵景区</a></p>
+        <p><a href="jingcaituijian.html">精彩推荐</a></p>
+        <p><a href="peitaoyinjian.html">配套硬件</a></p>
     </div>
 </div>
+<script>
+    var menus = document.querySelector('[data-head]');
+    var comm_menu = document.querySelector("[data-menu]");
+    menus.onclick = function(){
+        if(this.className.indexOf("active") < 0){
+            this.className += " active";
+            comm_menu.className += ' active';
+        }else{
+            this.className = this.className.replace(/active/ig,'');
+            comm_menu.className = comm_menu.className.replace(/active/ig,'');
+        }
+    };
+</script>
 
 <div id="content_slider" class="swipslider">
     <ul class="sw-slides">
@@ -286,11 +299,17 @@
 <script src="lib/js/jquery-1.11.3.js"></script>
 <script src="lib/js/swipeslider.js"></script>
 <script>
-    $('#content_slider').swipeslider({
-        transitionDuration: 800,
-        autoPlayTimeout: 3000,
-        sliderHeight: '300px'
-    });
+    !function(){
+        $('#content_slider').swipeslider({
+            transitionDuration: 800,
+            autoPlayTimeout: 3000,
+            sliderHeight: '300px'
+        });
+
+        $(".i-dong-tai .i-dong-tai-main .i-dong-tai-main-item .right").on("click",".item",function(){
+            $(this).addClass("active").siblings(".active").removeClass("active");
+        });
+    }();
 </script>
 </body>
 </html>

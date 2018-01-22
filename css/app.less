@@ -30,8 +30,10 @@ body{
   .display_flex();
   .align_items(center);
   .jcs();
+  position: relative;
+  z-index: 499;
   .logo{
-    .flex(1);
+    //.flex(1);
     height: 100%;
       img{
         height: 100%;
@@ -405,6 +407,12 @@ body{
 
 /*精彩推荐样式*/
 .jctj{
+  min-height: 100%;
+  padding-top: 3.2rem;
+  margin-top: -3.2rem;
+  padding-bottom: 3.7rem;
+  margin-bottom: -3.7rem;
+  .box_sizing();
   .jctj-head{
     .display_flex();
     .justify_content(flex-start);
@@ -425,11 +433,18 @@ body{
   .jctj-main{
     padding: .45rem;
     overflow: hidden;
+    .display_flex();
+    .align_items(center);
+    .jcs();
+    flex-wrap:wrap;
     .jctj-cell{
       .box_sizing();
-      width: 48%;
+      //width: 48%;
+      width: -webkit-calc( ~"50% - .2rem");
+      width: -moz-calc(~"50% - .2rem");
+      width : calc(~"50% - .2rem");
       float: left;
-      margin-bottom: .5rem;
+      margin-bottom: .4rem;
       border: 1px solid #E9E9E9;
       display: inline-block;
       .jctj-cell-img{
@@ -459,12 +474,6 @@ body{
           font-weight: 600;
           color:#666666;
         }
-      }
-      &:nth-last-of-type(even){
-        margin-right: .25rem;
-      }
-      &:nth-last-of-type(odd){
-        margin-left: .25rem;
       }
     }
   }
@@ -539,6 +548,7 @@ body{
   .mjy-item{
     padding: .4rem;
     .mjy-item-img{
+      padding: .5rem 0;
       img{
         display: block;
         margin: 0 auto;
@@ -556,6 +566,15 @@ body{
       font-size: .6rem;
       color:#666666;
       line-height: 1rem;
+    }
+    .mjy-items{
+      .display_flex();
+      .jcs();
+      .align_items(center);
+      .mjy-item-img{
+        width: 30rem;
+        padding: 0 1rem;
+      }
     }
   }
   .mjy-gong-neng{
@@ -600,7 +619,195 @@ body{
       }
     }
   }
-
+  .mjy-video{
+    padding: 0 .4rem;
+    .mjy-video-title{
+      text-align: center;
+      font-size: .75rem;
+      color:#333333;
+      padding: .5rem 0;
+    }
+    .mjy-video-item{
+      .mjy-video-item-title{
+        color:#666666;
+        font-size: .6rem;
+        padding: .5rem 0;
+      }
+      .mjy-video-item-dis{
+        font-size: .5rem;
+        color:#999999;
+        p{
+          padding-top: .1rem;
+          line-height: .9rem;
+        }
+      }
+      .mjy-video-item-main{
+        .box_sizing();
+        padding: .5rem;
+        background-image: url(../images/bianjiao_01.png),url(../images/bianjiao_02.png);
+        background-position: 0 0,100% 100%;
+        background-repeat: no-repeat,no-repeat;
+        background-size: 7%;
+        margin: .5rem 0;
+        video{
+          display: block;
+          max-width: 100%;
+          max-height: 100%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+  .mjy-hzdw{
+    padding: .4rem;
+    .mjy-hzdw-title{
+      padding: .5rem 0;
+      font-size: .75rem;
+      text-align: center;
+      color:#333333;
+    }
+    .mjy-hzdw-main{
+      overflow: hidden;
+      border-top: 1px solid #EFEFEF;
+      border-left: 1px solid #EFEFEF;
+      .mjy-hzdw-main-item{
+        float: left;
+        width: 50%;
+        .box_sizing();
+        height: 5.25rem;
+        border-bottom: 1px solid #EFEFEF;
+        border-right: 1px solid #EFEFEF;
+        .display_flex();
+        .justify_content(center);
+        .align_items(center);
+        .box_sizing();
+        padding: 1rem 0;
+        img{
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+    }
+  }
 }
 
+/*帮助中心样式*/
+.bzzx-container{
+  .display_flex();
+  .flex_direction();
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top:0;
+  z-index: 500;
+  background-color: #fff;
+  overflow-y: auto;
+  overflow-x: hidden;
+  &.active{
+    z-index: -10;
+    opacity: 0;
+    display: none;
+  }
+  .bzzx-container-main{
+    .flex(1);
+    padding: 0 .6rem ;
+    .bzzx-container-main-title{
+      font-size: .7rem;
+      color:#333333;
+      padding: .5rem 0.4rem;
+      border-bottom: 1px solid #F9F9F9;
+    }
+    .bzzx-container-main-content{
+      color:#666666;
+      font-size: .6rem;
+      img{
+        display: block;
+        margin: 0.5rem auto;
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+    .bzzx-container-main-return{
+      text-align: center;
+      padding: 1rem 0;
+      a{
+        display: inline-block;
+        .border_radius(.3rem);
+        width: 3.5rem;
+        height: 1.25rem;
+        .box_sizing();
+        padding: .5rem 0;
+        background-image: url(../images/retrun-icon.png);
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: 26%;
+        background-color: #EE7331;
+      }
+    }
+  }
+}
+
+.bzzx{
+  padding: .4rem;
+  min-height: 100%;
+  padding-top: 3.2rem;
+  margin-top: -3.2rem;
+  padding-bottom: 3.7rem;
+  margin-bottom: -3.7rem;
+  .box_sizing();
+  position: relative;
+  //z-index: -1;
+  .bzzx-list{
+    border-top: 1px solid #eceaea;
+    border-left: 1px solid #eceaea;
+    border-right: 1px solid #eceaea;
+    margin: .4rem 0;
+    li{
+      .display_flex();
+      border-bottom: 1px solid #eceaea;
+      .bzzx-list-item-icon{
+        border-right: 1px solid #eceaea;
+        .display_flex();
+        .align_items(center);
+        .justify_content(center);
+        width: 4rem;
+        padding: .5rem 0;
+        p{
+          text-align: center;
+        }
+        .icon{
+          display: inline-block;
+          width: 3rem;
+          height: 2rem;
+          background-color: #fff;
+          background-position: 50%;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+        span{
+          display: block;
+          font-size: .7rem;
+          color:#333333;
+          padding-top: .2rem;
+        }
+      }
+      .bzzx-list-item-main{
+        font-size: .7rem;
+        color:#666666;
+        .display_flex();
+        .flex_direction();
+        .flex(1);
+        .justify_content(center);
+        p{
+          padding: .5rem;
+          font-size: .8rem;
+          &:not(:last-child){
+            border-bottom: 1px solid #eceaea;
+          }
+        }
+      }
+    }
+  }
+}
 
