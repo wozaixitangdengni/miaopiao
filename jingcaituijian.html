@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="lib/css/reset.css"/>
     <link rel="stylesheet" href="css/app.css"/>
     <link rel="stylesheet" href="lib/css/swipeslider.css"/>
+    <style>
+        html,body{
+            height: 100%;
+            min-height: 100%;
+        }
+    </style>
 </head>
 <body>
 <!--公用头部-->
@@ -15,10 +21,10 @@
     <a href="" class="logo">
         <img src="images/logo.png" alt=""/>
     </a>
-    <div class="menu active"></div>
+    <div class="menu" data-head></div>
 </header>
 <!--弹出菜单-->
-<div class="comm-menu">
+<div class="comm-menu" data-menu>
     <div class="comm-menu-mask"></div>
     <div class="comm-menu-main">
         <p><a href="javascript:;">首页</a></p>
@@ -28,6 +34,19 @@
         <p><a href="javascript:;">配套硬件</a></p>
     </div>
 </div>
+<script>
+    var menus = document.querySelector('[data-head]');
+    var comm_menu = document.querySelector("[data-menu]");
+    menus.onclick = function(){
+        if(this.className.indexOf("active") < 0){
+            this.className += " active";
+            comm_menu.className += ' active';
+        }else{
+            this.className = this.className.replace(/active/ig,'');
+            comm_menu.className = comm_menu.className.replace(/active/ig,'');
+        }
+    };
+</script>
 
 <section class="jctj">
     <header class="jctj-head bottom_interval">
@@ -35,7 +54,142 @@
         <a href="javascript:void(0)">喵景区</a>
         <a href="javascript:void(0)">其他</a>
     </header>
+    <!-- 喵剧院-->
     <main class="jctj-main">
+        <div class="jctj-cell">
+            <div class="jctj-cell-img">
+                <img src="images/jingcaituijian.png" alt=""/>
+            </div>
+            <div class="jctj-cell-p"><span class="left">名称：</span><p class="right jctj-cell-p-title">[武汉] 群星小品会</p></div>
+            <div class="jctj-cell-p"><span class="left">时间：</span><p class="right">2017-9-30  16:18:00</p></div>
+            <div class="jctj-cell-p"><span class="left">地点：</span><p class="right">江阳艺术宫</p></div>
+        </div>
+        <div class="jctj-cell">
+            <div class="jctj-cell-img">
+                <img src="images/jingcaituijian.png" alt=""/>
+            </div>
+            <div class="jctj-cell-p"><span class="left">名称：</span><p class="right jctj-cell-p-title">[武汉] 群星小品会</p></div>
+            <div class="jctj-cell-p"><span class="left">时间：</span><p class="right">2017-9-30  16:18:00</p></div>
+            <div class="jctj-cell-p"><span class="left">地点：</span><p class="right">江阳艺术宫</p></div>
+        </div>
+        <div class="jctj-cell">
+            <div class="jctj-cell-img">
+                <img src="images/jingcaituijian.png" alt=""/>
+            </div>
+            <div class="jctj-cell-p"><span class="left">名称：</span><p class="right jctj-cell-p-title">[武汉] 群星小品会</p></div>
+            <div class="jctj-cell-p"><span class="left">时间：</span><p class="right">2017-9-30  16:18:00</p></div>
+            <div class="jctj-cell-p"><span class="left">地点：</span><p class="right">江阳艺术宫</p></div>
+        </div>
+        <div class="jctj-cell">
+            <div class="jctj-cell-img">
+                <img src="images/jingcaituijian.png" alt=""/>
+            </div>
+            <div class="jctj-cell-p"><span class="left">名称：</span><p class="right jctj-cell-p-title">[武汉] 群星小品会</p></div>
+            <div class="jctj-cell-p"><span class="left">时间：</span><p class="right">2017-9-30  16:18:00</p></div>
+            <div class="jctj-cell-p"><span class="left">地点：</span><p class="right">江阳艺术宫</p></div>
+        </div>
+        <div class="jctj-cell">
+            <div class="jctj-cell-img">
+                <img src="images/jingcaituijian.png" alt=""/>
+            </div>
+            <div class="jctj-cell-p"><span class="left">名称：</span><p class="right jctj-cell-p-title">[武汉] 群星小品会</p></div>
+            <div class="jctj-cell-p"><span class="left">时间：</span><p class="right">2017-9-30  16:18:00</p></div>
+            <div class="jctj-cell-p"><span class="left">地点：</span><p class="right">江阳艺术宫</p></div>
+        </div>
+        <div class="jctj-cell">
+            <div class="jctj-cell-img">
+                <img src="images/jingcaituijian.png" alt=""/>
+            </div>
+            <div class="jctj-cell-p"><span class="left">名称：</span><p class="right jctj-cell-p-title">[武汉] 群星小品会</p></div>
+            <div class="jctj-cell-p"><span class="left">时间：</span><p class="right">2017-9-30  16:18:00</p></div>
+            <div class="jctj-cell-p"><span class="left">地点：</span><p class="right">江阳艺术宫</p></div>
+        </div>
+        <div class="jctj-cell">
+            <div class="jctj-cell-img">
+                <img src="images/jingcaituijian.png" alt=""/>
+            </div>
+            <div class="jctj-cell-p"><span class="left">名称：</span><p class="right jctj-cell-p-title">[武汉] 群星小品会</p></div>
+            <div class="jctj-cell-p"><span class="left">时间：</span><p class="right">2017-9-30  16:18:00</p></div>
+            <div class="jctj-cell-p"><span class="left">地点：</span><p class="right">江阳艺术宫</p></div>
+        </div>
+        <div class="jctj-cell">
+            <div class="jctj-cell-img">
+                <img src="images/jingcaituijian.png" alt=""/>
+            </div>
+            <div class="jctj-cell-p"><span class="left">名称：</span><p class="right jctj-cell-p-title">[武汉] 群星小品会</p></div>
+            <div class="jctj-cell-p"><span class="left">时间：</span><p class="right">2017-9-30  16:18:00</p></div>
+            <div class="jctj-cell-p"><span class="left">地点：</span><p class="right">江阳艺术宫</p></div>
+        </div>
+    </main>
+    <!-- 喵景区-->
+    <main class="jctj-main" style="display: none">
+        <div class="jctj-cell">
+            <div class="jctj-cell-img">
+                <img src="images/jingcaituijian.png" alt=""/>
+            </div>
+            <div class="jctj-cell-p"><span class="left">名称：</span><p class="right jctj-cell-p-title">[武汉] 群星小品会</p></div>
+            <div class="jctj-cell-p"><span class="left">时间：</span><p class="right">2017-9-30  16:18:00</p></div>
+            <div class="jctj-cell-p"><span class="left">地点：</span><p class="right">江阳艺术宫</p></div>
+        </div>
+        <div class="jctj-cell">
+            <div class="jctj-cell-img">
+                <img src="images/jingcaituijian.png" alt=""/>
+            </div>
+            <div class="jctj-cell-p"><span class="left">名称：</span><p class="right jctj-cell-p-title">[武汉] 群星小品会</p></div>
+            <div class="jctj-cell-p"><span class="left">时间：</span><p class="right">2017-9-30  16:18:00</p></div>
+            <div class="jctj-cell-p"><span class="left">地点：</span><p class="right">江阳艺术宫</p></div>
+        </div>
+        <div class="jctj-cell">
+            <div class="jctj-cell-img">
+                <img src="images/jingcaituijian.png" alt=""/>
+            </div>
+            <div class="jctj-cell-p"><span class="left">名称：</span><p class="right jctj-cell-p-title">[武汉] 群星小品会</p></div>
+            <div class="jctj-cell-p"><span class="left">时间：</span><p class="right">2017-9-30  16:18:00</p></div>
+            <div class="jctj-cell-p"><span class="left">地点：</span><p class="right">江阳艺术宫</p></div>
+        </div>
+        <div class="jctj-cell">
+            <div class="jctj-cell-img">
+                <img src="images/jingcaituijian.png" alt=""/>
+            </div>
+            <div class="jctj-cell-p"><span class="left">名称：</span><p class="right jctj-cell-p-title">[武汉] 群星小品会</p></div>
+            <div class="jctj-cell-p"><span class="left">时间：</span><p class="right">2017-9-30  16:18:00</p></div>
+            <div class="jctj-cell-p"><span class="left">地点：</span><p class="right">江阳艺术宫</p></div>
+        </div>
+        <div class="jctj-cell">
+            <div class="jctj-cell-img">
+                <img src="images/jingcaituijian.png" alt=""/>
+            </div>
+            <div class="jctj-cell-p"><span class="left">名称：</span><p class="right jctj-cell-p-title">[武汉] 群星小品会</p></div>
+            <div class="jctj-cell-p"><span class="left">时间：</span><p class="right">2017-9-30  16:18:00</p></div>
+            <div class="jctj-cell-p"><span class="left">地点：</span><p class="right">江阳艺术宫</p></div>
+        </div>
+        <div class="jctj-cell">
+            <div class="jctj-cell-img">
+                <img src="images/jingcaituijian.png" alt=""/>
+            </div>
+            <div class="jctj-cell-p"><span class="left">名称：</span><p class="right jctj-cell-p-title">[武汉] 群星小品会</p></div>
+            <div class="jctj-cell-p"><span class="left">时间：</span><p class="right">2017-9-30  16:18:00</p></div>
+            <div class="jctj-cell-p"><span class="left">地点：</span><p class="right">江阳艺术宫</p></div>
+        </div>
+        <div class="jctj-cell">
+            <div class="jctj-cell-img">
+                <img src="images/jingcaituijian.png" alt=""/>
+            </div>
+            <div class="jctj-cell-p"><span class="left">名称：</span><p class="right jctj-cell-p-title">[武汉] 群星小品会</p></div>
+            <div class="jctj-cell-p"><span class="left">时间：</span><p class="right">2017-9-30  16:18:00</p></div>
+            <div class="jctj-cell-p"><span class="left">地点：</span><p class="right">江阳艺术宫</p></div>
+        </div>
+        <div class="jctj-cell">
+            <div class="jctj-cell-img">
+                <img src="images/jingcaituijian.png" alt=""/>
+            </div>
+            <div class="jctj-cell-p"><span class="left">名称：</span><p class="right jctj-cell-p-title">[武汉] 群星小品会</p></div>
+            <div class="jctj-cell-p"><span class="left">时间：</span><p class="right">2017-9-30  16:18:00</p></div>
+            <div class="jctj-cell-p"><span class="left">地点：</span><p class="right">江阳艺术宫</p></div>
+        </div>
+    </main>
+    <!-- 其他-->
+    <main class="jctj-main"  style="display: none">
         <div class="jctj-cell">
             <div class="jctj-cell-img">
                 <img src="images/jingcaituijian.png" alt=""/>
@@ -112,5 +266,20 @@
 
 <script src="js/font_size.js"></script>
 <script src="lib/js/jquery-1.11.3.js"></script>
+<script>
+    !function(){
+        $(".jctj .jctj-head a").on("click",function(){
+            var index = $(this).index();
+            $(this).addClass("active").siblings(".active").removeClass("active");
+            $.each($(".jctj .jctj-main"),function(i,item){
+                if(index == i){
+                    $(item).show();
+                }else{
+                    $(item).hide();
+                }
+            });
+        });
+    }();
+</script>
 </body>
 </html>
